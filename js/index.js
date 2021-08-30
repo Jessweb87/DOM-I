@@ -38,7 +38,7 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+let logo = document.getElementById("logo-img");// this will target the logo-img ID inside of the <header> element and change the logo//
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const navElements = document.querySelectorAll('a');
@@ -61,8 +61,12 @@ headerImg.src = siteContent["cta"]["img-src"]
 const button = document.querySelector('button');
 button.textContent = "Get Started";
 
-const midImg = document.querySelector("#middle-img");
-midImg.setAttribute = ('src', siteContent['main-content']["middle-img-src"]);
+const middleImg = document.querySelector(".middle-img");
+middleImg.setAttribute('src', siteContent['main-content']["middle-img-src"]);
+
+// document.querySelector(".middle-img")
+// 	.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
 
 document.querySelector('h4').innerHTML = siteContent['main-content']['features-h4'];
 
