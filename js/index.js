@@ -68,6 +68,7 @@ middleImg.setAttribute('src', siteContent['main-content']["middle-img-src"]);
 // 	.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 
+
 document.querySelector('h4').innerHTML = siteContent['main-content']['features-h4'];
 
 document.querySelector('.top-content .text-content:nth-of-type(2) h4').textContent = siteContent['main-content']['about-h4'];
