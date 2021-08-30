@@ -38,5 +38,63 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+let logo = document.getElementById("logo-img");// this will target the logo-img ID inside of the <header> element and change the logo//
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const navElements = document.querySelectorAll('a');
+navElements.forEach((item, index) => item.textContent = Object.values(siteContent.nav)[index]);
+
+// const firstElement = document.createElement("p");
+// firstElement.textContent = 'Example 1';
+// const nav = document.querySelector('nav');
+// nav.appendChild(firstElement);
+// const secondElement = document.createElement('p');
+// secondElement.textContent = "Example 1";
+// nav.prepend(secondElement);
+// nav.style.color = "green";
+
+document.querySelector('h1').innerHTML = 'Dom <br> Is <br> Awesome';
+
+const headerImg = document.querySelector("#cta-img");
+headerImg.src = siteContent["cta"]["img-src"]
+
+const button = document.querySelector('button');
+button.textContent = "Get Started";
+
+const middleImg = document.querySelector(".middle-img");
+middleImg.setAttribute('src', siteContent['main-content']["middle-img-src"]);
+
+// document.querySelector(".middle-img")
+// 	.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+
+
+document.querySelector('h4').innerHTML = siteContent['main-content']['features-h4'];
+
+document.querySelector('.top-content .text-content:nth-of-type(2) h4').textContent = siteContent['main-content']['about-h4'];
+
+document.querySelector('.top-content .text-content:nth-of-type(1) p').textContent = siteContent['main-content']['features-content'];
+
+document.querySelector('.top-content .text-content:nth-of-type(2) p').textContent = siteContent['main-content']['about-content'];
+
+document.querySelector('.bottom-content .text-content h4').innerHTML = siteContent['main-content']['services-h4'];
+
+document.querySelector('.bottom-content .text-content:nth-of-type(2) h4').textContent = siteContent['main-content']['product-h4'];
+
+document.querySelector('.bottom-content .text-content:nth-of-type(3) h4').textContent = siteContent['main-content']['vision-h4'];
+
+document.querySelector('.bottom-content .text-content:nth-of-type(1) p').textContent = siteContent['main-content']['services-content'];
+
+document.querySelector('.bottom-content .text-content:nth-of-type(2) p').textContent = siteContent['main-content']['product-content'];
+
+document.querySelector('.bottom-content .text-content:nth-of-type(3) p').textContent = siteContent['main-content']['vision-content'];
+
+document.querySelector('.contact h4').innerHTML = siteContent['contact'] ['contact-h4'];
+
+document.querySelector('.contact p').innerHTML = "123 Way 456 Street Somewhere, USA";
+
+document.querySelector('.container .contact p:nth-of-type(2').textContent = siteContent['contact']['phone'];
+
+document.querySelector('.container .contact p:nth-of-type(3').textContent = siteContent['contact']['email'];
+
+document.querySelector("footer").textContent = siteContent['footer']['copyright'];
